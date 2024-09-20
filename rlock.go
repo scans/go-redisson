@@ -111,7 +111,7 @@ func (r *RLock) tryAcquire(waitTime int64, leaseTime int64) (int64, error) {
 	// watch dog
 	ttl, err := r.tryAcquireInner(waitTime, r.g.watchDogTimeout.Milliseconds())
 	if err != nil {
-		return 0, nil
+		return 0, err
 	}
 	if ttl == 0 {
 		r.renewExpirationScheduler(goid)
