@@ -1,4 +1,4 @@
-module github.com/cheerego/go-redisson
+module github.com/scans/go-redisson
 
 go 1.16
 
